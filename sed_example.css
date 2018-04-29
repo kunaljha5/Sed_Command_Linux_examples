@@ -38,6 +38,9 @@ learn operating system.
 linux linux which one you choose.
 linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
 ejhakun@elx74341nqz:~$
+  
+  
+  
 
 
 
@@ -161,3 +164,207 @@ ejhakun@elx74341nqz:~$
 
 
 
+#2.1 - Insert one blank line after each line
+
+ejhakun@elx74341nqz:~$ sed G file.txt 
+unix is great os. unix is opensource. unix is free os.
+
+learn operating system.
+
+unix linux which one you choose.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+
+ejhakun@elx74341nqz:~$ 
+  
+  
+  
+  
+  
+#2.2 – To insert two blank lines –   
+ejhakun@elx74341nqz:~$ sed 'G;G' file.txt 
+unix is great os. unix is opensource. unix is free os.
+
+
+learn operating system.
+
+
+unix linux which one you choose.
+
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+
+
+ejhakun@elx74341nqz:~$ 
+
+  
+  
+  
+#2.3 – Delete blank lines and insert one blank line after each line – 
+ejhakun@elx74341nqz:~$ cat file.txt 
+
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/^$/d;G' file.txt 
+unix is great os. unix is opensource. unix is free os.
+
+learn operating system.
+
+unix linux which one you choose.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+
+ejhakun@elx74341nqz:~$ 
+
+  
+  
+#2.4 – Insert a black line above every line which matches “linux” – 
+
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;x;}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;x;x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{p}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;x}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ sed '/linux/{x;p;x;}' file.txt  
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+  
+  
+  
+#2.5 – Insert a blank line below every line which matches “linux” –
+  
+ejhakun@elx74341nqz:~$ sed '/linux/{p;x;}' file.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+
+  
+  
+#2.6 – Insert 5 spaces to the left of every lines – 
+  
+ejhakun@elx74341nqz:~$ sed 's/^/     /' file.txt 
+     unix is great os. unix is opensource. unix is free os.
+     learn operating system.
+     unix linux which one you choose.
+     unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+
+  
+  
+#3.1 – Number each line of a file (left alignment). **=** is used to number the line. \t is used for tab between number and sentence – 
+  
+ejhakun@elx74341nqz:~$ sed =  file.txt | sed 'N;s/\n/\t/'
+1	unix is great os. unix is opensource. unix is free os.
+2	learn operating system.
+3	unix linux which one you choose.
+4	unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+
+#3.1.1 insert number before each line
+ejhakun@elx74341nqz:~$ sed =  file.txt 
+1
+unix is great os. unix is opensource. unix is free os.
+2
+learn operating system.
+3
+unix linux which one you choose.
+4
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+ejhakun@elx74341nqz:~$ 
+
+  
+#3.2 – Number each line of a file (number on left, right-aligned). This command is similar to `cat -n filename`. 
+
+
+  
+  
