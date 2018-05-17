@@ -375,3 +375,8 @@ ejhakun@elx74341nqz:~$
   
   
   
+Remove Duplicate consecutive lines 
+  
+  
+   sed -i '$!N; /^\(.*\)\n\1$/!P; D'  filename
+  
