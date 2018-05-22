@@ -380,3 +380,10 @@ Remove Duplicate consecutive lines
   
    sed -i '$!N; /^\(.*\)\n\1$/!P; D'  filename
   
+
+  
+Removing empty line
+  
+  sed -i "/^$/d" filename
+  
+  
